@@ -28,4 +28,4 @@ Jika kamu ingin mereset dari awal, **delete key** di Local storage.\
 Chrome: `inspect -> application -> Local storage -> klik kanan -> delete`
 
 ## LICENSE
-The code and styles are licensed under the MIT license. Obviously you should not use the content of this repo in your own resume.😉
+The code and styles are licensed under the MIT license
