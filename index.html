@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Website Bookshelf App"
+    />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="assets/App.css">
+  </head>
+  <body>
+    <div id="root" class="root bg-dark width-full">
+        <div class="container width-full margin-x-auto">
+            <header class="header padding-y-9 padding-x-4">
+                <div class="user-heading padding-x-5 padding-b-10">
+                    <h1 id="user-name" class="text-light text-xl font-bold letter-space-wide">
+                    </h1>
+                </div>
+                <div class="search-wrap width-auto">
+                    <input id="searchInput" type="text" class="input-search width-xl-1 margin-r-1 padding-y-3 padding-x-2 text-light text-base letter-space-wide rounded-lg bg-transparent border-1 border-primary" placeholder="Cari Judul Buku atau Penulis">
+                </div>
+            </header>
+            <main class="main">
+                <section id="uncompleted-listbook">
+                    <div class="width-xl-1 text-light margin-x-auto padding-t-8 padding-b-4">
+                        <div class="header-listbook">
+                            <p id="totalUncompletedBook" class="text-md font-normal letter-space-wider"></p>
+                        </div>
+                        <div class="wrapper-listbook">
+
+                        </div> 
+
+                    </div>
+                </section>
+
+                <!-- Adding New Book -->
+                <section id="add-new" class="padding-b-10">
+                    <div class="wrapper-listbook width-xl-1 text-light margin-x-auto">
+                        <div class="card-listbook margin-t-2 padding-6 rounded-lg">
+                            <button id="addNewListBook" class="btn-add bg-primary padding-x-4 padding-y-2 text-light font-bold rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="width-7 height-7 margin-r-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Adding New Book -->
+
+                <section id="completed-listbook">
+                    <div class="width-xl-1 text-light margin-x-auto padding-y-8">
+                        <div class="header-listbook">
+                            <p id="totalCompletedBook" class="text-md font-normal letter-space-wider"></p>
+                        </div>
+                        <div class="wrapper-listbook">
+                            
+                        </div>
+                        
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer class="footer margin-t-16">
+            <div class="width-full height-12 padding-2-5">
+                <p class="text-xs text-light letter-space-wide font-light">Develop by Erik Hernanto<br>Copyright 2021 &copy; All Right Reserved</p>
+            </div>
+        </footer>
+
+            <!-- Modal Confirm -->
+            <div id="modalRemove" class="modal">
+                <div class="modal-container width-xl-1 margin-x-auto rounded">
+                    <div class="modal-content">
+                        <div class="modal-header padding-8">
+                            <h1 class="text-xl text-danger letter-space-wide">Peringatan!</h1>
+                        </div>
+                        <div class="modal-body padding-8">
+                            <p class="modal-message text-light text-md">Data yang sudah dihapus tidak bisa dikembalikan lagi. Apakah kamu yakin mau menghapus? </p>
+                        </div>
+                        <div class="modal-footer padding-x-8 padding-y-4">
+                            <div class="margin-l-auto">
+                                <button id="confirm" class="bg-primary padding-x-5 padding-y-2 rounded text-light text-lg font-bold">Ya</button>
+                                <button id="cancel" class="bg-transparent padding-x-5 padding-y-2 rounded text-light text-lg">Batalkan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Confirm -->
+
+            <div id="modalUsername" class="modal">
+                <div class="modal-container width-xl-1 margin-x-auto rounded">
+                    <div class="modal-content">
+                        <div class="modal-header padding-8">
+                            <h1 class="text-2xl text-primary letter-space-wide margin-b-3">Selamat datang!</h1>
+                            <h3 class="text-md text-light letter-space-wide font-normal">Mohon perkenalkan dirimu terlebih dulu</h3>
+                        </div>
+                        <div class="modal-body padding-8">
+                            <input id="usernameInput" type="text" class="input-username width-full padding-y-3 padding-x-2 text-light text-base letter-space-wide rounded-md bg-transparent border-1 border-primary" placeholder="Masukkan Nama Kamu">
+                            <p class="validate-message text-danger text-sm margin-t-4"></p>
+                        </div>
+                        <div class="modal-footer padding-x-8 padding-y-4">
+                            <div class="margin-l-auto">
+                                <button id="saveUsername" class="bg-primary padding-x-5 padding-y-2 rounded text-light text-lg font-bold">Oke</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
